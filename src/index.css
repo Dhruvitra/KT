@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  :root {
+    --accent-blue: #2c5282;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 text-white font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg border-2 border-primary-500 text-primary-600 font-semibold hover:bg-primary-50 transition-all duration-300;
+  }
+
+  .card-shadow {
+    @apply rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent;
+  }
+}
+
+body {
+  @apply font-sans antialiased;
+}
+
+/* Trusted clients marquee */
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+
+.marquee {
+  overflow: hidden;
+  position: relative;
+}
+.marquee-track {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  will-change: transform;
+  animation: marquee 18s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+.marquee-item {
+  min-width: 140px;
+  height: 56px;
+  background: #f3f4f6;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+}
+.marquee-item img { height: 32px; object-fit: contain; opacity: 0.85; }
+
+@keyframes marquee {
+  from { transform: translateX(0%); }
+  to { transform: translateX(-50%); }
+}
