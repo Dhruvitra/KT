@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { ChevronDown, Menu, X } from 'lucide-react'
 import { Link } from 'react-router-dom'
-import logo from './kt.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -23,7 +22,7 @@ export default function Navbar() {
     <nav className="w-full bg-white shadow sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <img src={logo} title="Kshetrajna Technologies LLP" alt="Kshetrajna logo" className="h-10 w-auto" />
+          <img src="/kt.png" title="Kshetrajna Technologies LLP" alt="Kshetrajna logo" className="h-10 w-auto" />
           <div className="leading-tight">
             <div className="text-2xl md:text-3xl font-extrabold text-slate-900">Kshetrajna</div>
             <div className="text-sm text-primary-600 font-semibold">Technologies LLP</div>
