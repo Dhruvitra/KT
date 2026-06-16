@@ -1,5 +1,5 @@
 import { Link, useParams } from 'react-router-dom'
-import { Check, ChevronRight } from 'lucide-react'
+import { Check } from 'lucide-react'
 
 const serviceDetails: Record<string, { title: string; subtitle: string; overview: string; features: string[]; platformFocus: string; image: string; }>
   = {
